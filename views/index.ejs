@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Mooli&family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="box">
+    
+  <h1><%= date %></h1>
+
+    <!-- Using form tag submits the input value to index.js to be rendered  -->
+
+<form class="inform" action="/" method="POST">
+  <button type="submit">+</button>
+      <input type="text" name="newItem" placeholder="Add Item">    
+</form>
+
+  <!-- loops through the lists and displays the data on ejs file -->  
+    
+  <% for(let i = 0; i<newListItem.length; i++) { %>
+<div class="content">
+  
+    <input type="checkbox">
+       <p><%= newListItem[i] %></p>  
+
+</div>   
+ <% } %>
+ 
+ </div>
+   <footer>
+     <p>&#169;copyright all rights reserved <a href="https://magi-tech.netlify.app" target="_blank">magitech</a></p>
+   </footer>
+</body>
+</html>
